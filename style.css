@@ -1,0 +1,35 @@
+p {
+    margin-left: 10px;
+    color: #000
+     }1
+h2 {
+    color: #EE204D
+}
+li {
+    color: #000
+    padding-left: 5px;
+    padding-top: 10px;
+}
+img#ivan {
+    weight: 100px;
+    height: 100px;
+    margin: 10px;
+    
+}
+i {
+    color: #ffa000
+}
+h2 {
+    color: #EE204D
+}
+TABLE { 
+    border: 2px solid #000; 
+    background-image:  
+   }
+TH { 
+    border: 2px solid #000; 
+    text-align: left;
+}
+TD { 
+    text-align: left;
+}
