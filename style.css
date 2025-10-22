@@ -32,4 +32,14 @@ TH {
 }
 TD { 
     text-align: left;
+
+}
+.navbar-.navbar-nav .nav-link.active {
+    background-color: #ffbf0159 !important;
+    color: #000 !important;
+    border-radius: 5px;
+}
+.navbar-nav .nav-link:hover {
+    background-color: #fff3cd;
+    border-radius: 5px;
 }
