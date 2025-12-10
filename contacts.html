@@ -1,38 +1,54 @@
-<!doctype html>
-<html>
-<head>
-<link rel="stylesheet" href="style.css">
-<a id="nachalo"></navigation></a>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="main+glav.html">Главная</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="kinem.html">Цитаты из фильмов</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="zadacha.html">Размен денег</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="contacts.html">Контакты</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="form.html">Форма обратной связи</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<html>
-    <center>
-<H3>Кликабельный QR для связи</H3>
-<a href="https://t.me/sglazzzzzzz"><img src="qr.jpg" alt="Нажми на меня" width="600px" height="400px"></a>    
-</center>
-</html>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="rurappers.html">Русские рэп-объединения</a></li>
+                    <li><a href="forma.html">Поддержать русский рэп</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main class="contacts-section">
+        <h1 class="contacts-title">КОНТАКТЫ</h1>
+        
+        <div class="contacts-description">
+            <p>Свяжитесь с нами для сотрудничества, вопросов по сайту или предложений о новых артистах. 
+            Мы всегда открыты для диалога и готовы пообщаться о русском могучем рэпеЮ</p>
+        </div>
 
+        <div class="contacts-grid">
+            <div class="contact-card">
+                <span class="contact-icon phone-icon">📱</span>
+                <h3 class="contact-type">Телефон</h3>
+                <div class="contact-info" id="phoneNumber">+7 (917) 689-50-74</div>
+                <button class="contact-link copy-btn" onclick="copyToClipboard('phoneNumber')">
+                    Копировать номер
+                </button>
+            </div>
+
+            <div class="contact-card">
+                <span class="contact-icon telegram-icon">🕊</span>
+                <h3 class="contact-type">Telegram</h3>
+                <div class="contact-info" id="telegramUsername">@sglazzzzzz</div>
+                <a href="https://t.me/sglazzzzzzz" target="_blank" class="contact-link">
+                    Написать в Telegram
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <span class="contact-icon vk-icon">👥</span>
+                <h3 class="contact-type">ВКонтакте</h3>
+                <div class="contact-info" id="vkLink">@baberau</div>
+                <a href="https://vk.com/baberau" target="_blank" class="contact-link">
+                    Перейти на страницу
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</head>

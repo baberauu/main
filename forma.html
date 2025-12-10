@@ -1,0 +1,213 @@
+</head>
+<link rel="stylesheet" href="css/style.css">
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="rurappers.html">Русские рэп-объединения</a></li>
+                    <li><a href="forma.html">Поддержать русский рэп</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="donate-section">
+        <h1 class="donate-title">ПОДДЕРЖАТЬ АРТИСТОВ</h1>
+        <div class="donate-description">
+            <p>Ваша поддержка помогает артистам создавать новую музыку, снимать клипы и проводить концерты. 
+            Каждое пожертвование — это вклад в развитие русской рэп-культуры. Спасибо, что вы с нами!</p>
+            <p>Все транзакции защищены SSL-шифрованием. Мы никогда не храним данные вашей карты.</p>
+        </div>
+
+        <form id="donateForm" class="donate-form" action="_blank">
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label" for="firstName">Имя <span class="required">*</span></label>
+                    <input type="text" 
+                           id="firstName" 
+                           name="donor_first_name" 
+                           class="form-input" 
+                           placeholder="Введите ваше имя" 
+                           required
+                           pattern="[А-Яа-яЁёA-Za-z\s]{2,50}"
+                           title="Только буквы (от 2 до 50 символов)">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="lastName">Фамилия <span class="required">*</span></label>
+                    <input type="text" 
+                           id="lastName" 
+                           name="donor_last_name" 
+                           class="form-input" 
+                           placeholder="Введите вашу фамилию" 
+                           required
+                           pattern="[А-Яа-яЁёA-Za-z\s]{2,50}"
+                           title="Только буквы (от 2 до 50 символов)">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="email">Email <span class="required">*</span></label>
+                <input type="text" 
+                       id="email" 
+                       name="donor_email" 
+                       class="form-input" 
+                       required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Выберите группу для поддержки <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" 
+                               id="artist_antihype" 
+                               name="supported_artist" 
+                               value="antihype" 
+                               class="radio-input" 
+                               checked>
+                        <label for="artist_antihype" class="radio-label">ANTIHYPE</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" 
+                               id="artist_52" 
+                               name="supported_artist" 
+                               value="crew52" 
+                               class="radio-input">
+                        <label for="artist_52" class="radio-label">52</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" 
+                               id="artist_viperr" 
+                               name="supported_artist" 
+                               value="viperr" 
+                               class="radio-input">
+                        <label for="artist_viperr" class="radio-label">VIPERR</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="amount">Сумма пожертвования (руб.) <span class="required">*</span></label>
+                <div class="amount-input-group">
+                    <input type="number" 
+                           id="amount" 
+                           name="donation_amount" 
+                           class="form-input amount-input" 
+                           min="50" 
+                           max="50000" 
+                           step="50" 
+                           value="500" 
+                           required>
+                    <span class="currency">₽</span>
+                </div>
+                <div class="radio-group" style="margin-top: 15px;">
+                    <div class="radio-option">
+                        <input type="radio" 
+                               id="amount_500" 
+                               name="quick_amount" 
+                               value="500" 
+                               class="radio-input" 
+                               onclick="document.getElementById('amount').value = 500">
+                        <label for="amount_500" class="radio-label">500 ₽</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" 
+                               id="amount_1000" 
+                               name="quick_amount" 
+                               value="1000" 
+                               class="radio-input" 
+                               onclick="document.getElementById('amount').value = 1000">
+                        <label for="amount_1000" class="radio-label">1000 ₽</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" 
+                               id="amount_5000" 
+                               name="quick_amount" 
+                               value="5000" 
+                               class="radio-input" 
+                               onclick="document.getElementById('amount').value = 5000">
+                        <label for="amount_5000" class="radio-label">5000 ₽</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="cardNumber">Номер банковской карты <span class="required">*</span></label>
+                <div class="card-input-group">
+                    <input type="text" 
+                           id="cardNumber" 
+                           name="card_number" 
+                           class="form-input" 
+                           placeholder="0000 0000 0000 0000" 
+                           pattern="\d{16}"
+                           maxlength="16"
+                           required
+                           title="16 цифр номера карты">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label" for="cardExpiry">Срок действия (ММ/ГГ) <span class="required">*</span></label>
+                    <input type="text" 
+                           id="cardExpiry" 
+                           name="card_expiry" 
+                           class="form-input" 
+                           placeholder="ММ/ГГ" 
+                           pattern="(0[1-9]|1[0-2])\/(2[3-9]|3[0-9])"
+                           maxlength="5"
+                           required
+                           title="Формат: ММ/ГГ (например: 12/25)">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="cardCVC">CVC/CVV <span class="required">*</span></label>
+                    <input type="text" 
+                           id="cardCVC" 
+                           name="card_cvc" 
+                           class="form-input" 
+                           placeholder="123" 
+                           pattern="\d{3,4}"
+                           maxlength="4"
+                           required
+                           title="3 или 4 цифры с обратной стороны карты">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="message">Сообщение артисту (необязательно)</label>
+                <textarea id="message" 
+                          name="donor_message" 
+                          class="form-textarea" 
+                          placeholder="Напишите ваше пожелание или слова поддержки для артиста..."
+                          maxlength="500"></textarea>
+            </div>
+            <div class="form-group">
+                <label style="color: #ccc; display: flex; align-items: flex-start; gap: 10px;">
+                    <input type="checkbox" 
+                           name="terms_accepted" 
+                           value="yes" 
+                           style="margin-top: 3px;"
+                           required>
+                    <span>Я согласен с <a href="#" style="color: #ffcc00;">правилами обработки персональных данных</a> и даю разрешение на использование моих средств для поддержки выбранного артиста.</span>
+                </label>
+            </div>
+            <button type="submit" class="submit-btn">
+                ПОДДЕРЖАТЬ АРТИСТА
+            </button>
+        </form>
+    </main>
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h2 class="modal-title">СПАСИБО ЗА ПОДДЕРЖКУ!</h2>
+            <p class="modal-text" id="successMessage">
+                Ваше пожертвование успешно отправлено. Артисты ценят вашу поддержку!
+                <br><br>
+                <strong>Сумма:</strong> <span id="donationAmount">500</span> ₽
+                <br>
+                <strong>Получатель:</strong> <span id="artistName">ANTIHYPE</span>
+            </p>
+            <button class="modal-close" onclick="closeModal()">ЗАКРЫТЬ</button>
+        </div>
+    </div>
+<script src="js/index.js"></script>
+</body>
